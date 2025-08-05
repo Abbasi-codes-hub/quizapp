@@ -1,7 +1,7 @@
 const quizData = [
     {
-        question: "What is 2 + 2?",
-        options: ["3", "4", "5", "6"],
+        question: "What is 2 + 4?",
+        options: ["3", "4", "5", "8"],
         correct: 1
     },
     {
@@ -17,7 +17,7 @@ const quizData = [
     {
         question: "Capital of Pakistan?",
         options: ["Lahore", "Karachi", "Islamabad", "Peshawar"],
-        correct: 2
+        correct: 1
     },
     {
         question: "2 x 3 = ?",
@@ -70,7 +70,7 @@ const quizData = [
         correct: 1
     },
     {
-        question: "What is the primary function of SQL?",
+        question: "What is the primary function of (sql)?",
         options: ["Web Design", "Database Management", "Network Security", "Graphics Design"],
         correct: 1
     }
@@ -104,25 +104,12 @@ const loadQuiz = () => {
         optionElements[index].innerHTML = `<i class="fas fa-check-circle"></i>${elem}`;
 
     })
-    // console.log(optionElements);
 
 }
 
 loadQuiz()
-// check the index when user select an option or checked after clicking on submit 
-// submitBtn.disabled  = true;
 
 const checkIndex = () => {
-    // let ans_index;
-    // answer.forEach((elem , index)=>{
-    //     if(elem.checked){
-    //         ans_index = index;
-    //     }
-    // })
-    // return ans_index;
-
-    //! more shorter code 
-
     let answerhub = Array.from(answer)
     return answerhub.findIndex(elem => elem.checked)
 }
@@ -173,4 +160,18 @@ submitBtn.addEventListener("click", () => {
 
 })
 
-console.log("wish you happy life dear");
+// !! let arraay = quizData;
+
+
+let timeDate = document.querySelector(".timeDate");
+setInterval(() => {
+    
+let date = new Date().toLocaleTimeString();
+
+timeDate.textContent = date
+}, 1000);
+
+let div = document.createElement("div");
+div.classList.add("style");
+div.innerText = currentQuestion
+timeDate.appendChild(div)
