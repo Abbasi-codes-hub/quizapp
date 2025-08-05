@@ -114,7 +114,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Your Name - [@your_twitter](https://twitter.com/your_twitter)
 
-Project Link: [https://github.com/yourusername/quiz-app](https://github.com/yourusername/quiz-app)
+Project Link: [https://abbasi-codes-hub.github.io/quizapp/](https://abbasi-codes-hub.github.io/quizapp/)
 
 ---
-⭐️ From [your-username](https://github.com/your-username)
+⭐️ From [your-username](https://github.com/abbasi-codes-hub)
