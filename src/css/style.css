@@ -101,7 +101,7 @@ hr {
   opacity: 1;
 }
 
-.quiz-result {
+.quiz-result , .option {
   text-align: center;
   padding: 20px;
 }
