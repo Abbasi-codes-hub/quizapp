@@ -86,8 +86,8 @@ let currentQuestion = 0;
 let score = 0;
 
 
-
-
+// score target 
+document.querySelector(".totalTarget").textContent = quizData.length;
 // loadingQuiz() function initialize
 
 const loadQuiz = () => {
@@ -97,6 +97,7 @@ const loadQuiz = () => {
     const { question, options } = quizData[currentQuestion];
     // console.log(question);
     questionelem.textContent = question;
+    document.querySelector(".Score").textContent = currentQuestion;
 
     //add options on html 
     options.forEach((elem, index) => {
@@ -107,10 +108,7 @@ const loadQuiz = () => {
 
 }
 
-
 loadQuiz()
-
-
 // check the index when user select an option or checked after clicking on submit 
 // submitBtn.disabled  = true;
 
@@ -126,12 +124,50 @@ const checkIndex = () => {
     //! more shorter code 
 
     let answerhub = Array.from(answer)
-     return answerhub.findIndex(elem =>  elem.checked)
+    return answerhub.findIndex(elem => elem.checked)
 }
 
 
+const defaultselectedOptions = () => {
+    let defalutOptions = Array.from(answer);
+    defalutOptions.forEach(elem => elem.checked = false)
+
+
+}
+
 submitBtn.addEventListener("click", () => {
     let userSelectedIndex = checkIndex()
+
+    if(userSelectedIndex === quizData[currentQuestion].correct){
+        score +=1 ;
+    }
+
+    currentQuestion++;
+
+
+
+    if (currentQuestion < quizData.length) {
+        defaultselectedOptions()
+        loadQuiz()
+    } else {
+        const resultDiv = `
+            <div class="quiz-result">
+                <i class="fas fa-trophy result-icon"></i>
+                <h2>Quiz Completed!</h2>
+                <p class="final-score">Your Score: ${score}/${quizData.length}</p>
+                <div class="score-details">
+                    <i class="fas fa-check correct-icon"></i>
+                    <span>Correct Answers: ${score}</span>
+                    <i class="fas fa-times wrong-icon"></i>
+                    <span>Wrong Answers: ${quizData.length - score}</span>
+                </div>
+                <button class="restart-btn" onclick="location.reload()">
+                    <i class="fas fa-redo-alt"></i> Try Again
+                </button>
+            </div>
+        `;
+        document.querySelector(".quiz").innerHTML = resultDiv;
+    }
     console.log(userSelectedIndex);
 
 
