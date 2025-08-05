@@ -120,5 +120,3 @@ Project Link: [https://abbasi-codes-hub.github.io/quizapp/](https://abbasi-codes
 <<<<<<< HEAD
 ⭐️ From [Samar Codes](https://github.com/abbasi-codes-hub)
 =======
-⭐️ From [your-username](https://github.com/abbasi-codes-hub)
->>>>>>> 1883b856a4176c697b03e2a1547c0c3d07c0d0f4
