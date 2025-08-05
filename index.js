@@ -172,3 +172,5 @@ submitBtn.addEventListener("click", () => {
 
 
 })
+
+console.log("wish you happy life dear");
