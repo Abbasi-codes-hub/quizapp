@@ -1,0 +1,14 @@
+{
+  "name": "quizapp",
+  "version": "1.0.0",
+  "description": "Quiz Application",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "live-server",
+    "dev": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}

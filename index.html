@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App | Abbasi-codes-hub</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="src\css\style.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <div class="quiz">
+        <div class="question-container">
+          <div class="question">
+            <i class="fas fa-question-circle"></i>
+            <h1>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
+              dolorem.
+            </h1>
+          </div>
+          <div class="scores">Score: <span>0</span> / <span>5</span></div>
+        </div>
+        <hr>
+        <div class="options">
+          <ul class="option-container">
+            <li class="option-item">
+              <input type="radio" name="answer" id="a" class="answer" />
+              <label for="a" class="option_1"
+                ><i class="fas fa-check-circle"></i> quiz</label
+              >
+            </li>
+            <li class="option-item">
+              <input type="radio" name="answer" id="b" class="answer" />
+              <label for="b" class="option_2"
+                ><i class="fas fa-check-circle"></i> quiz</label
+              >
+            </li>
+            <li class="option-item">
+              <input type="radio" name="answer" id="c" class="answer" />
+              <label for="c" class="option_3"
+                ><i class="fas fa-check-circle"></i> quiz</label
+              >
+            </li>
+            <li class="option-item">
+              <input type="radio" name="answer" id="d" class="answer" />
+              <label for="d" class="option_4"
+                ><i class="fas fa-check-circle"></i> quiz</label
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="button-container">
+          <button type="button" class="submit">
+            <i class="fas fa-paper-plane"></i> Submit
+          </button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
